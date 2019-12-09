@@ -19,7 +19,7 @@ import cn.itechyou.cms.taglib.annotation.Attribute;
 import cn.itechyou.cms.taglib.annotation.Tag;
 import cn.itechyou.cms.taglib.enums.FieldEnum;
 import cn.itechyou.cms.taglib.utils.RegexUtil;
-import cn.itechyou.cms.utils.StringUtils;
+import cn.itechyou.cms.utils.StringUtil;
 
 /**
  * List标签解析器
@@ -67,7 +67,7 @@ public class ListTag extends AbstractListTag implements IParse {
 			Map<String,Object> entity = new HashMap<String,Object>();
 			for (Attribute attribute : attributes) {
 				String condition = RegexUtil.parseFirst(tag, attribute.regex(), 0);
-				if(StringUtils.isBlank(condition)) {
+				if(StringUtil.isBlank(condition)) {
 					continue;
 				}
 				String key = condition.split("=")[0];
@@ -139,7 +139,7 @@ public class ListTag extends AbstractListTag implements IParse {
 			Map<String,Object> entity = new HashMap<String,Object>();
 			for (Attribute attribute : attributes) {
 				String condition = RegexUtil.parseFirst(tag, attribute.regex(), 0);
-				if(StringUtils.isBlank(condition)) {
+				if(StringUtil.isBlank(condition)) {
 					continue;
 				}
 				String key = condition.split("=")[0];

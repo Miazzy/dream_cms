@@ -21,7 +21,9 @@
 			<button type="button" class="btn btn-primary btn-block btn-large" onclick="login();">登录</button>
 		</form>
 	</div>
-	<div class="copyright">Copyright © 2018 I Tech You,我教你  京ICP备16039432号</div>
+		<div class="copyright">
+		Copyright © 2018 I Tech You,我教你  京ICP备16039432号
+		</div>
 	<script type="text/javascript" src="/resource/js/jquery.min.js"></script>
 	<script type="text/javascript" src="/resource/js/jQueryMessage/js/jquery.plugin.message.js"></script>
     <script type="text/javascript" src="/resource/js/vector.js"></script>
@@ -65,7 +67,7 @@
 					}else{
 						$("body").MessageBox({
 							type: 'error',
-							message:result.message,
+							message:result.info,
 							timeout:3000,
 							callbak:null
 						});
