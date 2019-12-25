@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import cn.itechyou.cms.taglib.tags.ArticleTag;
+import cn.itechyou.cms.taglib.tags.AttachmentTag;
 import cn.itechyou.cms.taglib.tags.CategoryTag;
 import cn.itechyou.cms.taglib.tags.ChannelArtListTag;
 import cn.itechyou.cms.taglib.tags.ChannelTag;
@@ -46,6 +47,8 @@ public class ParseEngine {
 	private PageListTag pageListTag;
 	@Autowired
 	private ArticleTag articleTag;
+	@Autowired
+	private AttachmentTag attachmentTag;
 	
 	/**
 	 * HTML解析入口
@@ -63,6 +66,7 @@ public class ParseEngine {
 		newHtml = channelTag.parse(newHtml);
 		newHtml = listTag.parse(newHtml);
 		newHtml = labelTag.parse(newHtml);
+		newHtml = attachmentTag.parse(newHtml);
 		newHtml = ifTag.parse(newHtml);
 		return newHtml;
 	}
@@ -76,6 +80,7 @@ public class ParseEngine {
 		String newHtml = new String(html);
 		newHtml = categoryTag.parse(newHtml, typeid);
 		newHtml = labelTag.parse(newHtml);
+		newHtml = attachmentTag.parse(newHtml);
 		return newHtml;
 	}
 	
@@ -91,6 +96,7 @@ public class ParseEngine {
 		String newHtml = new String(html);
 		newHtml = pageListTag.parse(newHtml,typeid,pageNum,pageSize);
 		newHtml = labelTag.parse(newHtml);
+		newHtml = attachmentTag.parse(newHtml);
 		return newHtml;
 	}
 	
@@ -104,6 +110,7 @@ public class ParseEngine {
 		String newHtml = new String(html);
 		newHtml = articleTag.parse(newHtml, id);
 		newHtml = labelTag.parse(newHtml);
+		newHtml = attachmentTag.parse(newHtml);
 		return newHtml;
 	}
 
