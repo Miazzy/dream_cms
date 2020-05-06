@@ -1,6 +1,6 @@
-<center>
-![系统结构](http://cdn.itechyou.cn/1-1ZQ91JT60-L.png "系统结构")
-</center>
+<p align="center">
+	<a href="https://www.itechyou.cn/"><img src="http://cdn.itechyou.cn/1-1ZQ91JT60-L.png" ></a>
+</p>
 
 # 梦想家CMS内容管理系统开源版J2EE代码
 
